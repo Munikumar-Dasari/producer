@@ -31,12 +31,12 @@
                     <div class="producer-label-input-bg-container">
                         <label for="genre" class="producer-label-input-heading">Genre*</label>
                         <select id="genre" class="producer-label-input-fields">
-                            <option>Comedy, Drama</option>
-                            <option>Horror, Comedy</option>
+                            <option>Comedy</option>
+                            <option>Horror</option>
                             <option>Scifi</option>
-                            <option>Thriller, Comedy</option>
-                            <option>Action, Comedy</option>
-                            <option>Action, Drama, Historic</option>
+                            <option>Thriller</option>
+                            <option>Action</option>
+                            <option>Drama</option>
                         </select>
                     </div>
                 </div>
@@ -157,11 +157,11 @@
                 <div class="col-12 col-md-6">
                     <div class="producer-label-input-bg-container">
                         <label for="filmCertification" class="producer-label-input-heading">Film Certification</label>
-                        <select id="filmCertification" class="producer-label-input-fields">
+                        <select id="filmCertification" class="producer-label-input-fields" >
                             <option value="U">U</option>
-                        <option value="U/A">U/A</option>
-                        <option value="A">A</option>
-                        <option value="Not Certified Yet">Not Certified Yet</option>
+                            <option value="U/A">U/A</option>
+                            <option value="A">A</option>
+                            <option value="Not Certified Yet">Not Certified Yet</option>
                         </select>
                     </div>
                 </div>
@@ -253,8 +253,33 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="producer-label-btn">Upload</button>
+        <button class="producer-label-btn" data-bs-toggle="modal" data-bs-target="#thankYou">Upload</button>
     </form>
+
+    <!-- Thank You Modal -->
+        <div class="modal fade" id="thankYou" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="producer-thank-bg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" style="margin-bottom:20px;" fill="#4CAF50" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                      <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                    </svg>
+                    <h1 class="producer-thank-heading">Thank You</h1>
+                    <p class="producer-thank-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <button class="producer-thank" data-bs-dismiss="modal" aria-label="Close">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 </div>
 {% endblock %}
 </body>
